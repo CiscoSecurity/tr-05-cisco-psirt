@@ -3,9 +3,7 @@ from code.__version__ import VERSION
 
 class Config:
     VERSION = VERSION
-
-    #SECRET_KEY = os.environ.get('SECRET_KEY', None)
-    SECRET_KEY = 'not use'
+    SECRET_KEY = None
 
 
     # Supported types with rules
