@@ -10,9 +10,7 @@ py3-pip python3-dev
 
 # do the Python dependencies
 ADD code /app
-ADD code/Pipfile code/Pipfile.lock /
-RUN set -ex && pip install --no-cache-dir --upgrade pipenv && \
-    pipenv install --system
+RUN pip3 install -r /app/requirements.txt
 RUN chown -R uwsgi.uwsgi /etc/uwsgi
 
 # copy over scripts to init
