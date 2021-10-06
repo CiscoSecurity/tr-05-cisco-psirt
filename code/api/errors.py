@@ -31,3 +31,10 @@ class InvalidArgumentError(TRFormattedError):
             INVALID_ARGUMENT,
             str(message)
         )
+
+class WatchdogError(TRFormattedError):
+    def __init__(self):
+        super().__init__(
+            code='health check failed',
+            message='Invalid Health Check'
+        )

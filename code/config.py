@@ -1,8 +1,9 @@
-from code.__version__ import VERSION
+import json
 
 
 class Config:
-    VERSION = VERSION
+    settings = json.load(open('container_settings.json', 'r'))
+    VERSION = settings['VERSION']
     SECRET_KEY = None
 
 

@@ -1,17 +1,17 @@
 from flask import Flask, jsonify
 
-from code.api import dashboard_api
-from code.api import health_api
-from code.api import version_api
-from code.api import TRFormattedError
-from code.api import jsonify_errors
+from api.dashboard import dashboard_api
+from api.health import health_api
+from api.version import version_api
+from api.errors import TRFormattedError
+from api.utils import jsonify_errors
 
 app = Flask(__name__)
 
 app.url_map.strict_slashes = False
 app.config.from_object('config.Config')
 
-app.register_blueprint(dashboard_api)
+#app.register_blueprint(dashboard_api)
 app.register_blueprint(health_api)
 app.register_blueprint(version_api)
 
