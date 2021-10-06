@@ -6,8 +6,8 @@ echo
 echo " Development Dockerfile build script."
 echo
 
-module_name="GuardDuty"
-image_name="tr-05-guard-duty"
+module_name="Cisco-PSIRT"
+image_name="tr-05-cisco-psirt"
 
 CONFIG_FILE=code/container_settings.json
 if [ -f $CONFIG_FILE ]; then
